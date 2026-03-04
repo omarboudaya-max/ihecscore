@@ -37,11 +37,11 @@ const sectionsData = {
             { name: "Statistique & Proba", coeff: 1, id: "stat" },
             { name: "Comptabilité", coeff: 1, id: "compta_bi" },
             { name: "Principe de Gestion", coeff: 1, id: "pg_bi" },
-            { name: "Compétences Numériques", coeff: 1, id: "comp_num" },
-            { name: "Anglais", coeff: 1, id: "bus_comm" },
-            { name: "Développement Personnel", coeff: 1, id: "dev_pers" },
+            { name: "Compétences Numériques", coeff: 1, id: "comp_num", type: "ds" },
+            { name: "Anglais", coeff: 1, id: "bus_comm", type: "ds" },
+            { name: "Développement Personnel", coeff: 1, id: "dev_pers", type: "ds" },
 
-            { name: "Bases de Données", coeff: 1.5, id: "db" }
+            { name: "Bases de Données", coeff: 1.5, id: "db", type: "ds" }
         ],
         totalCoeff: 15
     },
