@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IHEC CARTHAGE SCORE</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="background-globes"></div>
+    <div class="container">
+        <header>
+            <img src="assets/logo.jpg" alt="IHEC Carthage Logo" class="logo">
+            <h1>IHEC CARTHAGE SCORE</h1>
+
+            <div class="selector-container">
+                <div class="select-group">
+                    <label for="section-select">Niveau / Filière :</label>
+                    <select id="section-select" class="section-select">
+                        <option value="LSG">1ère LSG</option>
+                        <option value="BI">1ère BI</option>
+                        <option value="2LSG">2ème LSG</option>
+                        <option value="2LSC">2ème LSC</option>
+                        <option value="2BI">2ème BI</option>
+                        <option value="3LMGT">3ème LMGT</option>
+                        <option value="3LMKG">3ème LMKG</option>
+                        <option value="3LFIN">3ème LFIN</option>
+                        <option value="3LSC">3ème LSC</option>
+                        <option value="3BI">3ème BI</option>
+                    </select>
+                </div>
+                <div class="select-group">
+                    <label for="semester-select">Semestre :</label>
+                    <select id="semester-select" class="section-select">
+                        <option value="S1">Semestre 1</option>
+                        <option value="S2">Semestre 2</option>
+                    </select>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div id="subjects-grid" class="subjects-grid">
+                <!-- Subject Cards will be injected by JavaScript -->
+            </div>
+
+            <div class="results-section">
+                <button id="calculate-btn" class="calculate-btn">Calculer le Score</button>
+                <div id="result-display" class="result-display hidden">
+                    <div class="score-circle">
+                        <span id="final-score">0.00</span>
+                        <span class="out-of">/ 20</span>
+                    </div>
+                    <p id="result-message" class="result-message"></p>
+                </div>
+            </div>
+
+            <div id="detailed-results" class="detailed-results hidden">
+                <h3>Détails par Matière</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Matière</th>
+                            <th>Moyenne</th>
+                            <th>Coeff</th>
+                        </tr>
+                    </thead>
+                    <tbody id="results-body">
+                        <!-- Rows injected by JS -->
+                    </tbody>
+                </table>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 IHEC Carthage. All Rights Reserved.</p>
+        </footer>
+        <button id="about-btn" class="about-btn" aria-label="À propos">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="12" y1="16" x2="12" y2="12"></line>
+                <line x1="12" y1="8" x2="12.01" y2="8"></line>
+            </svg>
+        </button>
+
+        <div id="about-modal" class="modal hidden">
+            <div class="modal-content">
+                <button class="close-modal-btn">&times;</button>
+
+                <div class="modal-header">
+                    <div class="icon-circle">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="12" y1="16" x2="12" y2="12"></line>
+                            <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                        </svg>
+                    </div>
+                    <h2>À propos</h2>
+                </div>
+
+                <div class="modal-body">
+                    <div class="info-section">
+                        <h3>Contributor</h3>
+                        <div class="info-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="12" cy="7" r="4"></circle>
+                            </svg>
+                            <span>Omar Boudaya</span>
+                        </div>
+                    </div>
+
+                    <div class="info-section">
+                        <h3>Contact Us</h3>
+                        <div class="info-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                                </path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                            <a href="mailto:omarboudaya1@gmail.com">omarboudaya1@gmail.com</a>
+                        </div>
+                    </div>
+
+                    <div class="modal-footer">
+                        <p>IHEC Carthage &copy; 2026</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+    <button id="theme-toggle" class="theme-toggle" aria-label="Basculer le thème">
+        <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+        <svg class="moon-icon hidden" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+    </button>
+    <script src="script.js"></script>
+</body>
+
+</html>
