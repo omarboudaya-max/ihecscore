@@ -43,7 +43,7 @@ const sectionsData = {
 
             { name: "Bases de Données", coeff: 1.5, id: "db", type: "ds" }
         ],
-        totalCoeff: 15
+        totalCoeff: 13.5
     },
     "BI_S2": {
         subjects: [
