@@ -296,6 +296,26 @@ const sectionsData = {
             { name: "PFE", coeff: 15, id: "pfe_3bi", type: "pfe" }
         ],
         totalCoeff: 15
+    },
+
+    // M1 Entrepreneuriat
+    "M1ENT_S1": {
+        subjects: [
+            { name: "Gestion des projets et management des risques", coeff: 2, id: "gp_mr" },
+            { name: "Business intelligence", coeff: 2, id: "bi_m1" },
+            { name: "Fondements et tendences de l'entrepreneuriat", coeff: 1.5, id: "fte" },
+            { name: "Construction de business model", coeff: 1.5, id: "cbm" },
+            { name: "Environnement et conjoncture", coeff: 1.5, id: "env_conj" },
+            { name: "Anglais", coeff: 1.5, id: "ang_m1" },
+            { name: "Design thinking et techniques de creativité", coeff: 1, id: "dt_tc" },
+            { name: "Management responsable et RSE", coeff: 1, id: "m_rse" },
+            { name: "Outils nueriques pour entrepreneurs", coeff: 1, id: "on_ent" }
+        ],
+        totalCoeff: 13
+    },
+    "M1ENT_S2": {
+        subjects: [],
+        totalCoeff: 0
     }
 };
 
