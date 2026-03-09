@@ -312,10 +312,6 @@ const sectionsData = {
             { name: "Outils nueriques pour entrepreneurs", coeff: 1, id: "on_ent" }
         ],
         totalCoeff: 13
-    },
-    "M1ENT_S2": {
-        subjects: [],
-        totalCoeff: 0
     }
 };
 
@@ -327,6 +323,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function update() {
         const sec = sectionSelect.value;
+
+        // Hide/Show Semestre 2 based on section
+        const s2Option = semesterSelect.querySelector('option[value="S2"]');
+        if (sec === 'M1ENT') {
+            s2Option.classList.add('hidden');
+            if (semesterSelect.value === 'S2') {
+                semesterSelect.value = 'S1';
+            }
+        } else {
+            s2Option.classList.remove('hidden');
+        }
+
         const sem = semesterSelect.value;
         // Always combine key now, as 1st year is also semesterized
         const key = `${sec}_${sem}`;
